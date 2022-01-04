@@ -1,0 +1,258 @@
+/* base */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1400px;
+    
+    width: 100%;
+    
+    margin: auto;
+    
+    
+}
+
+/* header */
+
+header {
+    max-width: 1000px;
+    max-height: 32px;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+}
+
+/* main */
+
+
+/* section intro */
+.section-intro {
+    width: 100%;
+    
+    height: 800px;
+    background-image: url(./images/headphones_hero_1.jpg);
+    background-position: center;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* navbar */
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    max-height: 15px;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9rem;
+    color: #FFFFFF;
+    font-family:'Source Sans Pro', sans-serif;
+}
+
+nav ul li a:hover {
+    color: #FF6565;
+}
+
+nav ul li {
+    padding: 0 1rem;
+}
+
+/* logo */
+
+header a img {
+    max-width: 161px;
+    max-height: 32px;
+    width: 100%;
+    height: 100%;
+}
+
+/* hero sectio */
+
+.hero-section {
+    max-width: 637px;
+    width: 100%;
+    max-height: 313px;
+    height: 100%;
+    display: block;
+    text-align: center;
+    
+    position: relative;
+    top: 40%;
+}
+
+.hero-section h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-family:'Source Sans Pro', sans-serif;
+    color: #FFFFFF;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    
+}
+
+.hero-section h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-family:'Source Sans Pro', sans-serif;
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    
+}
+
+.hero-section p {
+    font-style: normal;
+    font-weight: normal;
+    font-family:'Source Sans Pro', sans-serif;
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+.hero-section button {
+    max-width: 162px;
+    max-height: 44px;
+    width: 100%;
+    height: 100%;
+    background: #FF6565;
+    border-radius: 22px;
+    border: 0px;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    font-style: normal;
+    font-weight: normal;
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.hero-section button:hover {
+    opacity: 0.9;
+}
+
+/* hamburger menu */ 
+
+.menu-icon {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    padding: 2.5rem;
+    display: none;
+    
+}
+
+.menu-icon .nav-icon {
+    display: block;
+    background-color: #FFFFFF;
+    width: 1.4rem;
+    height: .2rem;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+.menu-icon .nav-icon::before,
+.menu-icon .nav-icon::after {
+    content: '';
+    display: block;
+    width: 130%;
+    height: 130%;
+    position: absolute;
+    background: #FFFFFF;
+    transition: all .2s ease-out;
+}
+
+.menu-icon .nav-icon::before {
+    top: .7rem;
+}
+
+.menu-icon .nav-icon::after {
+    top: -.7rem;
+}
+
+#menu-btn {
+    display: none;
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::before,
+#menu-btn:checked ~ .menu-icon .nav-icon::after {
+    top: 0;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+    .section-intro {
+        height: 900px;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        max-height: 0;
+        height: 100%;
+        align-items: center;
+        
+    }
+    nav ul li {
+        padding: 18px 0;
+        
+    }
+    nav {
+        display: none;
+        
+    }
+    #menu-btn:checked ~ nav {
+        display: flex;
+        
+    }
+    
+}
