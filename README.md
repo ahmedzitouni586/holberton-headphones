@@ -15,4 +15,4 @@ HTML and CSS are all i need to use in this project, it seems easy but in fact it
 
 ## Final Result
 
-[](smiling.jpg)
+![image info](./smiling.jpg)
